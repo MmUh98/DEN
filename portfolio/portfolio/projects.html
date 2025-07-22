@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Muhammad Mansoor Ul Haq</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Mansoor</a>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode"></button>
+    </div>
+  </header>
+  <main>
+    <section class="projects-section">
+      <h1 class="projects-title">Latest <span class="accent">Project</span></h1>
+      <div class="projects-list">
+        <div class="project-card">
+          <div class="project-img"><img  src ="images/Search.jpg" alt = "Context-Aware Movie Search Engine"></div>
+          <h2>Context-Aware Movie Search Engine</h2>
+          <p>Built with Elasticsearch and Streamlit. A smart search engine for movies using context-aware queries.</p>
+          <a href="https://github.com/MmUh98/movie-engine-using-ElasticSearch.git" target="_blank" class="btn project-btn">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <div class="project-img"><img src="images/Diabetes.png" alt="Diabetes Prediction System"></div>
+          <h2>Diabetes Prediction System</h2>
+          <p>Genetic Algorithm and Streamlit-based system for predicting diabetes risk.</p>
+          <a href="https://github.com/MmUh98/Diabetes-Prediction-System.git" target="_blank" class="btn project-btn">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <button id="scrollToTop" title="Scroll to top">&#8679;</button>
+  <script src="script.js"></script>
+</body>
+</html> 
