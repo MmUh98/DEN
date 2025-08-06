@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Calculator</h1>
+    <div class="inputs">
+      <input type="number" id="num1" placeholder="First number">
+      <input type="number" id="num2" placeholder="Second number">
+    </div>
+    <div class="sci-buttons">
+      <button class="op" data-op="sqrt">√</button>
+      <button class="op" data-op="pow">xʸ</button>
+      <button class="op" data-op="sin">sin</button>
+      <button class="op" data-op="cos">cos</button>
+      <button class="op" data-op="tan">tan</button>
+      <button class="op" data-op="log">log</button>
+      <button class="op" data-op="exp">eˣ</button>
+      <button class="op" data-op="clear">C</button>
+    </div>
+    <div class="buttons">
+      <button class="op" data-op="add">+</button>
+      <button class="op" data-op="subtract">−</button>
+      <button class="op" data-op="multiply">×</button>
+      <button class="op" data-op="divide">÷</button>
+    </div>
+    <div class="result">
+      <span id="result-label">Result:</span>
+      <span id="result-value">0</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
