@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Items CRUD API",
+    "_postman_id": "12345678-1234-5678-1234-567812345678",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Items",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/items", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items"] }
+      }
+    },
+    {
+      "name": "Get Item",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/items/1", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items", "1"] }
+      }
+    },
+    {
+      "name": "Create Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-CSRF-Token", "value": "{{csrf_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\": \"New Item\", \"description\": \"Test desc\" }"
+        },
+        "url": { "raw": "http://localhost:8000/api/items", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items"] }
+      }
+    },
+    {
+      "name": "Update Item",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-CSRF-Token", "value": "{{csrf_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\": \"Updated Title\" }"
+        },
+        "url": { "raw": "http://localhost:8000/api/items/1", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items", "1"] }
+      }
+    },
+    {
+      "name": "Delete Item",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "X-CSRF-Token", "value": "{{csrf_token}}" }
+        ],
+        "url": { "raw": "http://localhost:8000/api/items/1", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items", "1"] }
+      }
+    },
+    {
+      "name": "Validation Error",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-CSRF-Token", "value": "{{csrf_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\": \"\" }"
+        },
+        "url": { "raw": "http://localhost:8000/api/items", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items"] }
+      }
+    },
+    {
+      "name": "Not Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/items/9999", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "items", "9999"] }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# List items
+curl -X GET http://localhost:8000/api/items
+
+# Get item by ID
+curl -X GET http://localhost:8000/api/items/1
+
+# Create item (replace CSRF_TOKEN)
+curl -X POST http://localhost:8000/api/items \
+  -H "Content-Type: application/json" \
+  -H "X-CSRF-Token: CSRF_TOKEN" \
+  -d '{"title":"New Item","description":"Test"}'
+
+# Update item (replace CSRF_TOKEN)
+curl -X PUT http://localhost:8000/api/items/1 \
+  -H "Content-Type: application/json" \
+  -H "X-CSRF-Token: CSRF_TOKEN" \
+  -d '{"title":"Updated"}'
+
+# Delete item (replace CSRF_TOKEN)
+curl -X DELETE http://localhost:8000/api/items/1 \
+  -H "X-CSRF-Token: CSRF_TOKEN"
+
+# Validation error (empty title)
+curl -X POST http://localhost:8000/api/items \
+  -H "Content-Type: application/json" \
+  -H "X-CSRF-Token: CSRF_TOKEN" \
+  -d '{"title":""}'
+
+# Not found
+curl -X GET http://localhost:8000/api/items/9999
